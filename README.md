@@ -12,6 +12,18 @@ only in some circumstances (BuildConfig.DEBUG flag, some resources available onl
 I've created my own wrapper, ALog, that has API compatible in 100% with android.util.Log class, but adds a setter for
 minimum log level. Now you can set a minimum log level in runtime, whenever you want, to whatever value you'd like to.
 
+Usage
+=====
+
+    import com.github.plnice.androidlogger.ALog;
+    
+    ...
+    
+    ALog.setMinLogLevel(ALog.INFO);
+    ALog.i("MyTag", "Hi there!");
+    ALog.d("MyTag", "Well, this will be skipped.");
+    
+
 Credits
 =======
 I used AOSP source code (specifically, android.util.Log) class as a base.
