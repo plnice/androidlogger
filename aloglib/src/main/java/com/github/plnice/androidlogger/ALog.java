@@ -86,7 +86,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int v(String tag, String msg) {
-        if (sMinLogLevel >= VERBOSE) {
+        if (sMinLogLevel <= VERBOSE) {
             return Log.v(tag, msg);
         }
         return 0;
@@ -101,7 +101,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int v(String tag, String msg, Throwable tr) {
-        if (sMinLogLevel >= VERBOSE) {
+        if (sMinLogLevel <= VERBOSE) {
             return Log.v(tag, msg, tr);
         }
         return 0;
@@ -115,7 +115,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int d(String tag, String msg) {
-        if (sMinLogLevel >= DEBUG) {
+        if (sMinLogLevel <= DEBUG) {
             return Log.d(tag, msg);
         }
         return 0;
@@ -130,7 +130,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int d(String tag, String msg, Throwable tr) {
-        if (sMinLogLevel >= DEBUG) {
+        if (sMinLogLevel <= DEBUG) {
             return Log.d(tag, msg, tr);
         }
         return 0;
@@ -144,7 +144,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int i(String tag, String msg) {
-        if (sMinLogLevel >= INFO) {
+        if (sMinLogLevel <= INFO) {
             return Log.i(tag, msg);
         }
         return 0;
@@ -159,7 +159,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int i(String tag, String msg, Throwable tr) {
-        if (sMinLogLevel >= INFO) {
+        if (sMinLogLevel <= INFO) {
             return Log.i(tag, msg, tr);
         }
         return 0;
@@ -173,7 +173,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int w(String tag, String msg) {
-        if (sMinLogLevel >= WARN) {
+        if (sMinLogLevel <= WARN) {
             return Log.w(tag, msg);
         }
         return 0;
@@ -188,7 +188,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int w(String tag, String msg, Throwable tr) {
-        if (sMinLogLevel >= WARN) {
+        if (sMinLogLevel <= WARN) {
             return Log.w(tag, msg, tr);
         }
         return 0;
@@ -202,7 +202,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int w(String tag, Throwable tr) {
-        if (sMinLogLevel >= WARN) {
+        if (sMinLogLevel <= WARN) {
             return Log.w(tag, tr);
         }
         return 0;
@@ -216,7 +216,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int e(String tag, String msg) {
-        if (sMinLogLevel >= ERROR) {
+        if (sMinLogLevel <= ERROR) {
             return Log.e(tag, msg);
         }
         return 0;
@@ -231,7 +231,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int e(String tag, String msg, Throwable tr) {
-        if (sMinLogLevel >= ERROR) {
+        if (sMinLogLevel <= ERROR) {
             return Log.e(tag, msg, tr);
         }
         return 0;
@@ -248,7 +248,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int wtf(String tag, String msg) {
-        if (sMinLogLevel >= ASSERT) {
+        if (sMinLogLevel <= ASSERT) {
             return Log.wtf(tag, msg);
         }
         return 0;
@@ -263,7 +263,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int wtf(String tag, String msg, Throwable tr) {
-        if (sMinLogLevel >= ASSERT) {
+        if (sMinLogLevel <= ASSERT) {
             return Log.wtf(tag, msg, tr);
         }
         return 0;
@@ -277,7 +277,7 @@ public class ALog {
      * @return The number of bytes written.
      */
     public static int wtf(String tag, Throwable tr) {
-        if (sMinLogLevel >= ASSERT) {
+        if (sMinLogLevel <= ASSERT) {
             return Log.wtf(tag, tr);
         }
         return 0;
